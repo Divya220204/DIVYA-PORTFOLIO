@@ -7,6 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize Icons
     lucide.createIcons();
 
+    // 1b. Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
     // 2. Register GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
