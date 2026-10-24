@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya Vasnani | Creative Portfolio</title>
+    <!-- Google Fonts: Syncopate (for brutalism display) and Inter (for readability) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="loading">
+    <!-- Noise Texture Overlay -->
+    <div class="noise"></div>
+
+    <!-- Custom Inverted Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Minimal Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">DV<span class="dot">.</span></a>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link" data-text="About">About</a>
+                <a href="#work" class="nav-link" data-text="Work">Work</a>
+                <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- Avant-Garde Hero Section -->
+            <section class="hero panel">
+                <div class="hero-container">
+                    <div class="hero-text-wrapper">
+                        <h1 class="hero-title title-top" data-speed="0.8">SYSTEMS</h1>
+                        <h1 class="hero-title title-bottom" data-speed="1.2">& DESIGN</h1>
+                    </div>
+                    
+                    <div class="hero-image-wrapper" data-speed="0.9">
+                        <div class="image-reveal"></div>
+                        <img src="assets/portrait.jpg" alt="Divya Vasnani" class="hero-image parallax-img" onerror="this.src='https://placehold.co/800x1200/ffffff/dddddd?text=Portrait';">
+                    </div>
+
+                    <div class="hero-content">
+                        <p class="hero-label">Divya D Vasnani</p>
+                        <p class="hero-desc">Computer Science & Design undergraduate building intelligent digital experiences through AI and avant-garde UI/UX.</p>
+                        <div class="scroll-indicator">
+                            <span class="scroll-text">Scroll</span>
+                            <div class="scroll-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Abstract About Section -->
+            <section id="about" class="about panel">
+                <div class="container section-padding">
+                    <div class="about-grid">
+                        <div class="about-left">
+                            <h2 class="huge-text" data-speed="0.9">AI<br>MEETS<br>UX.</h2>
+                        </div>
+                        <div class="about-right">
+                            <div class="about-text-block fade-up">
+                                <p>I am driven by the intersection of algorithmic logic and human psychology. My work strips away the unnecessary, focusing purely on function wrapped in breathtaking form.</p>
+                                <p>From training machine learning models to architecting fluid web experiences, I believe the best software feels invisible yet powerful.</p>
+                            </div>
+                            
+                            <!-- Glassmorphism Stats -->
+                            <div class="stats-grid">
+                                <div class="stat-card glass-card fade-up">
+                                    <span class="stat-num">8.0</span>
+                                    <span class="stat-label">CGPA</span>
+                                </div>
+                                <div class="stat-card glass-card fade-up" style="transition-delay: 0.1s;">
+                                    <span class="stat-num">2027</span>
+                                    <span class="stat-label">Graduation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Infinite Marquee Skills -->
+            <section class="marquee-section">
+                <div class="marquee-wrapper">
+                    <div class="marquee-content">
+                        <span>PYTHON</span><span class="star">✦</span>
+                        <span>JAVASCRIPT</span><span class="star">✦</span>
+                        <span>UI/UX DESIGN</span><span class="star">✦</span>
+                        <span>SCIKIT-LEARN</span><span class="star">✦</span>
+                        <span>FIGMA</span><span class="star">✦</span>
+                        <span>PANDAS</span><span class="star">✦</span>
+                        <span>PROMPT ENGINEERING</span><span class="star">✦</span>
+                    </div>
+                    <!-- Duplicate for infinite loop -->
+                    <div class="marquee-content">
+                        <span>PYTHON</span><span class="star">✦</span>
+                        <span>JAVASCRIPT</span><span class="star">✦</span>
+                        <span>UI/UX DESIGN</span><span class="star">✦</span>
+                        <span>SCIKIT-LEARN</span><span class="star">✦</span>
+                        <span>FIGMA</span><span class="star">✦</span>
+                        <span>PANDAS</span><span class="star">✦</span>
+                        <span>PROMPT ENGINEERING</span><span class="star">✦</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Creative Asymmetrical Projects -->
+            <section id="work" class="work panel">
+                <div class="container section-padding">
+                    <h2 class="section-title fade-up">SELECTED WORK</h2>
+                    
+                    <div class="projects-wrapper">
+                        <!-- Project 1 (Large, Right Aligned) -->
+                        <article class="project-item align-right">
+                            <div class="project-img-container" data-speed="0.9">
+                                <div class="image-overlay"></div>
+                                <img src="assets/waste_ai.png" alt="Waste Classification" class="parallax-img">
+                            </div>
+                            <div class="project-info" data-speed="1.1">
+                                <span class="project-num">01</span>
+                                <h3>Waste Classification AI</h3>
+                                <p>Computer Vision • Deep Learning</p>
+                            </div>
+                        </article>
+
+                        <!-- Project 2 (Offset Left) -->
+                        <article class="project-item align-left">
+                            <div class="project-img-container" data-speed="0.9">
+                                <div class="image-overlay"></div>
+                                <img src="assets/hr_system.png" alt="HR System" class="parallax-img">
+                            </div>
+                            <div class="project-info" data-speed="1.15">
+                                <span class="project-num">02</span>
+                                <h3>Next-Gen HR Dashboard</h3>
+                                <p>UI/UX Design • AI Integration</p>
+                            </div>
+                        </article>
+
+                        <!-- Project 3 (Center Feature) -->
+                        <article class="project-item align-center">
+                            <div class="project-img-container full-width" data-speed="0.85">
+                                <div class="image-overlay"></div>
+                                <img src="assets/candle.png" alt="Candle Brand" class="parallax-img">
+                            </div>
+                            <div class="project-info center-text" data-speed="1.1">
+                                <span class="project-num">03</span>
+                                <h3>Luxury Brand Landing</h3>
+                                <p>Web Design • Frontend Development</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Minimal Experience Timeline -->
+            <section class="experience panel">
+                <div class="container section-padding">
+                    <div class="exp-header fade-up">
+                        <h2 class="section-title">EXPERIENCE<br>& CERTIFICATES</h2>
+                    </div>
+                    
+                    <ul class="exp-list">
+                        <li class="exp-row hover-reveal">
+                            <div class="exp-time">Recent</div>
+                            <div class="exp-title">AI/ML Intern</div>
+                            <div class="exp-company">IBM</div>
+                            <div class="hover-image">
+                                <img src="assets/heart_ai.png" alt="AI Work">
+                            </div>
+                        </li>
+                        <li class="exp-row hover-reveal">
+                            <div class="exp-time">Past</div>
+                            <div class="exp-title">Team Member</div>
+                            <div class="exp-company">AIESEC OGV</div>
+                            <div class="hover-image">
+                                <img src="assets/todo.png" alt="Management">
+                            </div>
+                        </li>
+                        <li class="exp-row hover-reveal">
+                            <div class="exp-time">Cert</div>
+                            <div class="exp-title">Deep Learning Specialization</div>
+                            <div class="exp-company">Coursera</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Massive Footer Contact -->
+            <footer id="contact" class="footer panel">
+                <div class="footer-container">
+                    <h1 class="massive-text footer-cta">LET'S TALK</h1>
+                    
+                    <div class="footer-bottom">
+                        <div class="footer-links">
+                            <a href="mailto:divyavasnani.dv@gmail.com" class="hover-line">Email</a>
+                            <a href="#" class="hover-line">LinkedIn</a>
+                        </div>
+                        <div class="footer-credit">
+                            <p>© 2026 Divya Vasnani. Designed with intent.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
